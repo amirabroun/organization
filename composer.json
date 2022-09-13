@@ -1,0 +1,15 @@
+{
+    "name": "amirabroun/organization",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Amir Abroun",
+            "email": "abroon234@gmail.com"
+        }
+    ],
+    "require": {}
+}
