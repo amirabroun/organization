@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+    nginx:
+        container_name: "organization"
+        build: ./docker/nginx
+        links:
+            - php
+        ports:
+            - "8000:80"
+        volumes:
+            - ./:/usr/share/nginx/www
+
+    php:
+        container_name: "php-organization"
+        build: ./docker/php
+        volumes:
+            - ./:/usr/share/nginx/www
+
+networks:
+    default:
+        external: true
+        name: app
