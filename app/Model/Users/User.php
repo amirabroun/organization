@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Users;
+namespace App\Model\Users;
 
-use App\Organization;
+use App\Model\Organization;
 
 class User extends Organization
 {
