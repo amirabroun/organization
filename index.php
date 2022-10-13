@@ -1,10 +1,11 @@
 <?php require __DIR__ . '/vendor/autoload.php';
 
+use App\Model\Organization;
 use App\Model\Users\User;
 
-$_1 = new User;
+$instance = new User;
 
-$_1->adduser(
+$instance->adduser(
     [
         'name' => 'Sajjad',
         'last_name' => 'Vosough',
@@ -13,11 +14,7 @@ $_1->adduser(
         'phone' => '0987654321',
         'email' => '****@gmail.com'
     ]
-);
-
-$_2 = new User;
-
-$_2->adduser(
+)->adduser(
     [
         'name' => 'Amir',
         'last_name' => 'Abron',
@@ -26,11 +23,7 @@ $_2->adduser(
         'phone' => '0987654321',
         'email' => '****@gmail.com'
     ]
-);
-
-$_3 = new User;
-
-$_3->adduser(
+)->adduser(
     [
         'name' => 'Arthur',
         'last_name' => 'Morgan',
@@ -41,4 +34,4 @@ $_3->adduser(
     ]
 );
 
-dd($_1, $_2, $_3);
+dd(Organization::$users);
