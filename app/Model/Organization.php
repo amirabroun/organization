@@ -2,8 +2,6 @@
 
 namespace App\Model;
 
-use App\Users\User;
-
 abstract class Organization
 {
     /**
@@ -14,10 +12,12 @@ abstract class Organization
     /**
      * @var array $users
      */
-    private static array $users = [];
+    public static array $users = [];
 
     public function adduser(array $user)
     {
         self::$users[] = $user;
+
+        return $this;
     }
 }
