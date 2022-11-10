@@ -1,6 +1,6 @@
 <?php require __DIR__ . '/vendor/autoload.php';
 
-use App\Model\Users\User;
+use App\Models\User;
 
 User::query()->adduser(
     [
