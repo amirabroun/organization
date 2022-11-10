@@ -1,11 +1,8 @@
 <?php require __DIR__ . '/vendor/autoload.php';
 
-use App\Model\Organization;
 use App\Model\Users\User;
 
-$instance = new User;
-
-$instance->adduser(
+User::query()->adduser(
     [
         'name' => 'Sajjad',
         'last_name' => 'Vosough',
@@ -32,6 +29,6 @@ $instance->adduser(
         'phone' => '0987654321',
         'email' => '****@gmail.com'
     ]
-);
+)->saveUsers();
 
-dd(Organization::$users);
+dd(User::query()->users());
