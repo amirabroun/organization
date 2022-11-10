@@ -13,6 +13,7 @@ services:
     php:
         container_name: "php-organization"
         build: ./docker/php
+        env_file: .env
         volumes:
             - ./:/usr/share/nginx/www
 
