@@ -10,32 +10,3 @@ function dd(...$data)
         (object)$data
     ));
 }
-
-function logger()
-{
-    throw new Exception();
-}
-
-function uri()
-{
-    return trim($_SERVER['REQUEST_URI'], '/');
-}
-
-function checkRoute(string $route)
-{
-    $routeParts = explode('/', $route);
-    $uriParts = explode('/', uri());
-
-    if (count($routeParts) !== count($uriParts)) return false;
-
-    foreach ($routeParts as $key => $partRoute) {
-        if ($partRoute !== $uriParts[$key] && !isParamRouteSection($partRoute)) return false;
-    }
-
-    return true;
-}
-
-function isParamRouteSection($routeSection)
-{
-    return strstr($routeSection, '{') && strstr($routeSection, '}');
-}
